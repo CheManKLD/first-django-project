@@ -1,0 +1,8 @@
+{% extends 'women/base.html' %}
+{% load women_tags %}
+
+{% block content %}
+<ul class="list-articles">
+    {% show_posts cat_selected %}
+</ul>
+{% endblock %}
