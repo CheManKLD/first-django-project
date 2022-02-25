@@ -1,6 +1,6 @@
 # Django_Project
 ## Технологии
-### Django, SQLiteStudio
+### Django, SQLiteStudio, django-debug-toolbar, django-simple-captcha
 
 Пробный сайт с постами в рамках изучения Django Framework.
 
