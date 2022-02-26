@@ -17,12 +17,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from women.views import pageNotFound
+from women.views import pageNotFound, WomenAPIView
 
 from mysite import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/womenlist/', WomenAPIView.as_view()),
     path('captcha/', include('captcha.urls')),
     path('', include('women.urls')),
 ]
