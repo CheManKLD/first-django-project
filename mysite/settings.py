@@ -138,3 +138,10 @@ CACHES = {
         'LOCATION': os.path.join(BASE_DIR, 'mysite_cache'),
     }
 }
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDER_CLASSES': [
+        'rest_framework.renders.JSONRenderer',
+        'rest_framework.renders.BrowsableAPIRenderer',
+    ]
+}

@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, FormView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from rest_framework import generics
+from rest_framework import viewsets
 
 from .serializers import WomenSerializer
 from .utils import *
@@ -123,6 +123,6 @@ def logout_user(request):
     return redirect('login')
 
 
-class WomenAPIView(generics.ListAPIView):
+class WomenViewSet(viewsets.ModelViewSet):
     queryset = Women.objects.all()
     serializer_class = WomenSerializer
